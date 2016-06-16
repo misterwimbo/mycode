@@ -1,3 +1,6 @@
+//mini jeu en c puissance 4
+//szymanski B
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -32,7 +35,7 @@ main()
     do
     {
 
-        do // boucle de forçage de choix entre 1 et 7
+        do // boucle de forÃ§age de choix entre 1 et 7
         {
             aficherGrille(grille_de_jeu);
             printf("\n\tJoueur %d a vous de jouer\n",joueur);
@@ -116,7 +119,7 @@ void aficherGrille(char tab[][7])
     printf("\t*****************************\n");
 }
 /*******************************************/
-/**  met à zero la grille au debut du jeu  */
+/**  met Ã  zero la grille au debut du jeu  */
 /*******************************************/
 void mise_a_zero_de_la_grille(char tab[][7])
 {
@@ -180,14 +183,14 @@ void verif_si_grille_pleine(char tab[][7],int *player)
     }
 }
 /*******************************************/
-/** va verifier si il y a 4 pions  alignés */
+/** va verifier si il y a 4 pions  alignÃ©s */
 /**     a la vertical                      */
 /*******************************************/
 void alignement_vertical_ok(char tab[][7],int *player)
 {
     int i,j;
     char a;
-//verification si 4 pions ont alignés a la vertical
+//verification si 4 pions ont alignÃ©s a la vertical
     for(i=0; i<6; i++)
     {
         for(j=0; j<7; j++)
@@ -216,14 +219,14 @@ void alignement_vertical_ok(char tab[][7],int *player)
     }
 }
 /*******************************************/
-/** va verifier si il y a 4 pions  alignés */
+/** va verifier si il y a 4 pions  alignÃ©s */
 /**          a l'horizontal                */
 /*******************************************/
 void alignement_horizontal_ok(char tab[][7],int *player)
 {
     int i,j;
     char a;
-//verification si 4 pions ont alignés a l'horizontal
+//verification si 4 pions ont alignÃ©s a l'horizontal
     for(i=0; i<6; i++)
     {
         for(j=0; j<7; j++)
@@ -252,7 +255,7 @@ void alignement_horizontal_ok(char tab[][7],int *player)
     }
 }
 /*******************************************/
-/** va verifier si il y a 4 pions  alignés */
+/** va verifier si il y a 4 pions  alignÃ©s */
 /**        en diagonale  haut              */
 /*******************************************/
 void alignement_diagonale_montante(char tab[][7],int *player)
@@ -291,7 +294,7 @@ void alignement_diagonale_montante(char tab[][7],int *player)
     }
 }
 /*******************************************/
-/** va verifier si il y a 4 pions  alignés */
+/** va verifier si il y a 4 pions  alignÃ©s */
 /**        en diagonale en descendant      */
 /*******************************************/
 void alignement_diagonale_descendante(char tab[][7],int *player)
@@ -331,18 +334,18 @@ void alignement_diagonale_descendante(char tab[][7],int *player)
 }
 /*******************************************/
 /** verification anti debordement          */
-/**         axe ordonée   ( bas )          */
+/**         axe ordonÃ©e   ( bas )          */
 /*******************************************/
 int anti_deborde_bas(int position_y)
 {
-    /*avant la verification ,si 4 pions sont alignés ,il faudras s'assurer
+    /*avant la verification ,si 4 pions sont alignÃ©s ,il faudras s'assurer
     que l'on ne deborde pas du tableau
-    par exemple si j'ajoute 3 pions en dessous d'une position donnée ,es ce que je deborde ?
+    par exemple si j'ajoute 3 pions en dessous d'une position donnÃ©e ,es ce que je deborde ?
     cette fonction serviras a savoir si oui ou non on verfie l'alignement de 4 pions
     vers la diagonale bas-droite
     et la diagonale bas-gauche
     x==position du pion sur la ligne  abscisses
-    y== position du pion sur la colonne ordonnées
+    y== position du pion sur la colonne ordonnÃ©es
     si on deborde la fonction renvoie 1 */
 
     int resultat;
@@ -355,19 +358,19 @@ int anti_deborde_bas(int position_y)
 }
 /*******************************************/
 /** verification anti debordement          */
-/**          axe des ordonées ( haut )     */
+/**          axe des ordonÃ©es ( haut )     */
 /*******************************************/
 int anti_deborde_haut(int position_y)
 {
-    /*avant la verification ,si 4 pions sont alignés ,il faudras s'assurer
+    /*avant la verification ,si 4 pions sont alignÃ©s ,il faudras s'assurer
     que l'on ne deborde pas du tableau
-    par exemple si j'ajoute 3 pions au dessus d'une position donnée
+    par exemple si j'ajoute 3 pions au dessus d'une position donnÃ©e
     es ce que je deborde ?
     cette fonction serviras a savoir si oui ou non on verfie l'alignement de 4 pions
     vers le  haut,la diagonale haut-droite
     et la diagonale haut-gaucheA
     x==position du pion sur la ligne  abscisses
-    y== position du pion sur la colonne ordonnées
+    y== position du pion sur la colonne ordonnÃ©es
     si on deborde la fonction renvoie 1 */
 
     int resultat;
@@ -384,9 +387,9 @@ int anti_deborde_haut(int position_y)
 /*******************************************/
 int anti_deborde_droite(int position_x)
 {
-    /*avant la verification ,si 4 pions sont alignés ,il faudras s'assurer
+    /*avant la verification ,si 4 pions sont alignÃ©s ,il faudras s'assurer
        que l'on ne deborde pas du tableau
-       par exemple si j'ajoute 3 pions a droite d'une position donnée
+       par exemple si j'ajoute 3 pions a droite d'une position donnÃ©e
        es ce que je deborde ?
      si on deborde la fonction renvoie 1 */
     int resultat;
